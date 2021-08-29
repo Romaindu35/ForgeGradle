@@ -343,6 +343,7 @@ public class MavenArtifactDownloader {
 
     @Nullable
     private static File _downloadWithCache(Project project, URI maven, String path, boolean changing, boolean bypassLocal) throws IOException, URISyntaxException {
+        System.out.println("debug - download file " + path + " on maven " + maven.getPath());
         URL url = new URIBuilder(maven)
             .setPath(maven.getPath() + '/' + path)
             .build()
